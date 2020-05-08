@@ -45,13 +45,9 @@ float* perceptron_pocket(float w[colone], float (*d)[colone], int l){
 			}
 		s = 0;
 		}
-		for(x = 0 ; x < i ; x++ ){
+		for(x = 0 ; x < i ; x++ ){//on calcule les erreur
 			for(j = 0; j < colone-1; j++){
 				e = e + pow(d[i][colone-1] - d[x][j]*w[j], 2);
-				}
-			}
-		for( x = 0 ; x < i ; x++ ){
-			for(j = 0; j < colone-1; j++){
 				e_p = e_p + pow(d[i][colone-1] - d[x][j]*w_pocket[j], 2);
 				}
 			}
